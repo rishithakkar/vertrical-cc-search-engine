@@ -1,6 +1,10 @@
 import express from "express";
 import helmet from "helmet";
-import { handleCollegeList, handleCollegeDetails } from "./src/controlers/college.controler";
+import {
+  handleCollegeList,
+  handleCollegeDetails,
+  handleSearch,
+} from "./src/controlers/college.controler";
 import { authorize } from "./src/utils/authorize";
 import connect from "./src/utils/db.connect";
 
@@ -10,6 +14,7 @@ app.use(helmet()); // For security reason
 
 app.get("/college/all", authorize, handleCollegeList);
 app.get("/college/:clgId", authorize, handleCollegeDetails);
+app.get("/search/:title", authorize, handleSearch);
 
 app.listen(port, () => {
   console.log(`The server is running on ${port}. http://localhost:${port}`);

@@ -8,10 +8,19 @@ export const getCollegeList = () => {
   });
 };
 
-export const getCollegeDetails = (clgId: string) => {
+export const getCollegeDetailsById = (clgId: string) => {
   return new Promise(async (resolve, reject) => {
     const data = await College.find({ _id: clgId });
-    if (data) resolve(data);
+    if (data && data.length > 0) resolve(data);
+    else
+      reject({ message: "Oops! College you are looking for it is not available at the moment." });
+  });
+};
+
+export const getCollegeDetailsByTitle = (title: string) => {
+  return new Promise(async (resolve, reject) => {
+    const data = await College.find({ title: title });
+    if (data && data.length > 0) resolve(data);
     else
       reject({ message: "Oops! College you are looking for it is not available at the moment." });
   });
