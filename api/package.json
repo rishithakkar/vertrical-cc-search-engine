@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Backend API",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.ts"
+  },
+  "keywords": [],
+  "author": "rishithakkar",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.1",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
