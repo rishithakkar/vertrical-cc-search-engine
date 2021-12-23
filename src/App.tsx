@@ -1,13 +1,16 @@
 import React from "react";
 import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import MainPage from "./pages/MainPage";
 
-function App() {
+const App: React.FunctionComponent = () => {
   return (
-    <div className="container">
-      <div>Search box</div>
-      <div>List</div>
-    </div>
+    <Router>
+      <div className="container">
+        <MainPage />
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

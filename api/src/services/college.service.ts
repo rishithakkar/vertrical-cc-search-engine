@@ -1,4 +1,5 @@
 import College from "../models/college.model";
+import mongoose from "mongoose";
 
 export const getCollegeList = () => {
   return new Promise(async (resolve, reject) => {
@@ -20,9 +21,7 @@ export const getCollegeDetailsById = (clgId: string) => {
 export const getCollegeDetailsByTitle = (title: string) => {
   return new Promise(async (resolve, reject) => {
     const data = await College.find({ title: title });
-    if (data && data.length > 0) resolve(data);
-    else
-      reject({ message: "Oops! College you are looking for it is not available at the moment." });
+    resolve(data);
   });
 };
 

@@ -31,6 +31,6 @@ export const handleSearch = async (req: Request, res: Response) => {
     const list = await getCollegeDetailsByTitle(title);
     response(res, false, list, "College details");
   } catch (err: any) {
-    response(res, true, null, err.message || "Something happened wrong!", 400);
+    response(res, true, null, err.message, 400);
   }
 };
