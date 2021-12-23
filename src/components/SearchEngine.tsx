@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useState } from "react";
 import { get } from "../helpers/service";
 import { College } from "../interfaces/college.interface";
 import { useHistory } from "react-router-dom";
@@ -30,7 +31,7 @@ const SearchEngine: React.FunctionComponent<{}> = () => {
       <form style={{ maxWidth: "500px" }}>
         <h2>Search college details</h2>
         <div className="input-container">
-          <img src="./favicon.png" className="icon" />
+          <img src="./favicon.png" alt="favicon" className="icon" />
           <input
             className="input-field"
             type="text"
@@ -51,7 +52,11 @@ const SearchEngine: React.FunctionComponent<{}> = () => {
             <img src={clg.image} alt={clg.title} />
           </div>
           <div className="content" style={{ backgroundColor: "#ebf0ff" }}>
-            <a href="" onClick={() => handleCollegeDetails(clg)} className="link">
+            <a
+              href=""
+              onClick={() => handleCollegeDetails(clg)}
+              className="link"
+            >
               {clg.title}
             </a>
             <p>{clg.short_description}.</p>

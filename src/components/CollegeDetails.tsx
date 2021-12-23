@@ -1,9 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
-
-interface Param {
-  clgId?: String;
-}
 
 const CollegeDetails: React.FunctionComponent<{}> = (props) => {
   const location = useLocation();
@@ -14,7 +10,11 @@ const CollegeDetails: React.FunctionComponent<{}> = (props) => {
     <>
       <Link to="/">Back</Link>
       <div className="row-details">
-        <img src={college.image} alt={college.title} className="image-details" />
+        <img
+          src={college.image}
+          alt={college.title}
+          className="image-details"
+        />
 
         <div className="content">
           <h4>{college.title}</h4>

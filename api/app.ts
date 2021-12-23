@@ -23,3 +23,5 @@ app.listen(port, () => {
   console.log(`The server is running on ${port}. http://localhost:${port}`);
   connect(); // Once app is run, connect with database
 });
+
+module.exports = app;
