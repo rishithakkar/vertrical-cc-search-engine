@@ -87,3 +87,12 @@ body {
   padding: 3px;
   width: 184px;
 }
+
+.row-details {
+  display: contents;
+}
+
+.image-details {
+  width: 40%;
+  border-radius: 15px;
+}

@@ -11,7 +11,7 @@ import connect from "./src/utils/db.connect";
 
 const app = express();
 const port: number = 5555;
-app.use(helmet()); // For security reason
+app.use(helmet()); // To prevent server details to end user
 app.use(cors());
 app.use(express.static("public"));
 
